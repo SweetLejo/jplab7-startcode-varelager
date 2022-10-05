@@ -2,57 +2,65 @@ package no.hvl.dat100.varelager;
 
 public class Vare {
 
-	// TODO - objektvariable
-	
-	public Vare(int varenr, String navn, double pris) {
-		
-		throw new TODO("Vare"); // REMOVE ME WHEN DONE
-	}
-	
-	public int getVarenr() {
-		
-		throw new TODO("getVarenr");
-		
-	}
-	
-	public void setVarenr(int varenr) {
-		
-		throw new TODO("setVarenr");
-	}
-	
-	public String getNavn() {
-		
-		throw new TODO("getNavn");
-	}
-	
-	public void setNavn(String navn) {
-		
-		throw new TODO("setNavn");
-	}
-	
-	public double getPris() {
-		
-		throw new TODO("getPris");
-	}
-	
-	public void setPris(double pris) {
-		
-		throw new TODO("setPris");
-	}
-	
-	public double beregnMoms() {
-		
-		throw new TODO("beregnMoms");
-	}
-	
-	public String toString() {
-		
-		throw new TODO("toString");
-	}
-	
-	public boolean erBilligereEnn(Vare v) {
-		
-		throw new TODO("erBilligereEnn");
-	}
-	
+    private int varenr;
+    private String navn;
+    private double pris;
+
+    public Vare(int varenr, String navn, double pris) {
+
+        this.varenr = varenr;
+        this.navn = navn;
+        this.pris = pris;
+    }
+
+    public int getVarenr() {
+        return varenr;
+    }
+
+    public void setVarenr(int varenr) {
+
+        this.varenr = varenr;
+    }
+
+    public String getNavn() {
+
+        return navn;
+    }
+
+    public void setNavn(String navn) {
+
+        this.navn = navn;
+
+    }
+
+    public double getPris() {
+
+        return pris;
+    }
+
+    public void setPris(double pris) {
+
+        this.pris = pris;
+    }
+
+    public double beregnMoms() {
+
+        return this.pris * 0.2;
+    }
+
+    public String toString() {
+
+        return "Vare [varenr=" + this.varenr + ", navn=" + this.navn + ", pris=" + this.pris +"]";
+    }
+
+    public Vare() {
+        super();
+    }
+
+    public boolean erBilligereEnn(Vare v) {
+
+        return this.pris < v.getPris();
+
+    }
+
 }
